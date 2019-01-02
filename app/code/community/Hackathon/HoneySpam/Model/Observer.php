@@ -79,7 +79,7 @@ class Hackathon_HoneySpam_Model_Observer
         /* @var $helper Hackathon_HoneySpam_Helper_Data */
         $helper = Mage::helper('hackathon_honeyspam');
         /*if (strlen(Mage::app()->getRequest()->getParam($helper->getHoneypotName()))) {*/
-        if (Mage::app()->getRequest()->getParam($helper->getHoneypotName()) != 'order 200001567')
+        if (Mage::app()->getRequest()->getParam($helper->getHoneypotName()) != 'order 200001567') {
             Mage::log('Honeypot Input filled. Aborted.',Zend_Log::WARN);
 
             $e = new Mage_Core_Controller_Varien_Exception();
