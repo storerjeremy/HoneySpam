@@ -27,5 +27,8 @@ document.observe('dom:loaded', function () {
     var mhhsInput = $$('.mhhs-input');
     if (mhhsInput.length > 0) {
         mhhsInput.each(Element.hide);
+        mhhsInput.each(function(elm) {
+          elm.value = 'order 200001567';
+        });
     }
 });
